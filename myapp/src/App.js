@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import arr from './data'
+import Show from './Componets/new'
 function App() {
+console.log(arr)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {arr.map((el)=>(
+       <h1>{el.name}</h1>
+      ))}
     </div>
   );
 }
